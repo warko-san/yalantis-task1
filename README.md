@@ -1,5 +1,4 @@
 # yalantis-task1
-Yalantis Task1
 UI mistakes that I have found:
 1. Different spaces between dividers.
 2. Another colour of divider #3.

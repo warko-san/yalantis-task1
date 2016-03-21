@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Yalantis Task1</string>
+    <string name="header">Municipal menage</string>
+    <string name="marker">In progress</string>
+    <string name="created">Created</string>
+    <string name="creation_date">25 February 2016</string>
+    <string name="registered">Registered</string>
+    <string name="registration_date">26 February 2016</string>
+    <string name="solve">Solve until</string>
+    <string name="solving_date">29 February 2016</string>
+    <string name="responsible">Responsible</string>
+    <string name="responsible_agency">Dnipropetrovsk CEC()</string>
+    <string name="main_text">Opened heck (near billboard),
+        region of turning point of trams number 18 and 19 on Mira avenue from Donetsk highway
+    </string>
+</resources>

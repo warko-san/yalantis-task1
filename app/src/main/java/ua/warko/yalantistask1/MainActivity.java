@@ -11,16 +11,17 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
+//[Comment] Wrong toolbar and status bar colors.
 public class MainActivity extends AppCompatActivity {
-    private static ArrayList<PictureData> sPictures;
-    private static RecyclerView sRecyclerView;
+    private static ArrayList<PictureData> sPictures; //[Comment] Why static? It's a bad practice in Android. And use abstraction instead of realization
+    private static RecyclerView sRecyclerView; //[Comment] The same.
     private RecyclerView.LayoutManager mLayoutManager;
-    private static RecyclerView.Adapter sAdapter;
+    private static RecyclerView.Adapter sAdapter; //[Comment] Most of these fields should be local
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        android.support.v7.app.ActionBar actionBar = getSupportActionBar();
+        android.support.v7.app.ActionBar actionBar = getSupportActionBar(); //[Comment] Please optimize import
         actionBar.setHomeButtonEnabled(true);
         actionBar.setDisplayHomeAsUpEnabled(true);
         sRecyclerView = (RecyclerView) findViewById(R.id.recyclerview);
@@ -36,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
     private void fetchPictures() {
         sPictures = new ArrayList<>();
 
-        sPictures.add(new PictureData("cat"));
+        sPictures.add(new PictureData("cat")); //[Comment] Looks like hardcode. Please create <string-array />
         sPictures.add(new PictureData("dog"));
         sPictures.add(new PictureData("turtle"));
         sPictures.add(new PictureData("monkey"));
@@ -48,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case android.R.id.home:
-                this.finish();
+                this.finish(); //[Comment] Without this
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
@@ -57,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void showToastTextView(View view) {
         Toast toast = Toast.makeText(getApplicationContext(),
-                "TextView", Toast.LENGTH_SHORT);
+                "TextView", Toast.LENGTH_SHORT); //[Comment] Hardcode view.getClass.getSimpleName
         toast.setGravity(Gravity.CENTER, 0, 0);
         toast.show();
     }

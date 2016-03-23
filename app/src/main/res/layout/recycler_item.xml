@@ -11,4 +11,6 @@
         android:id="@+id/imageView"
         android:padding="10dp"
         android:onClick="showToastImageView" />
+
+    <!-- [Comment] Hardcode -->
 </LinearLayout>

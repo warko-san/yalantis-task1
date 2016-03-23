@@ -17,10 +17,10 @@ import java.util.ArrayList;
 public class PictureAdapter extends RecyclerView.Adapter<PictureAdapter.MyViewHolder> {
 
     private ArrayList<PictureData> mPictureDataSet;
-    public Context myContext;
+    public Context myContext; //[Comment] mContext
     // Adds a ViewHolder
-    public static class MyViewHolder extends RecyclerView.ViewHolder {
-        ImageView imagePicture;
+    public static class MyViewHolder extends RecyclerView.ViewHolder { //[Comment] Just ViewHolder
+        ImageView imagePicture; //[Comment] Wrong visibility modifier, wrong name. It's not a picture, it's imageView
 
         public MyViewHolder(View itemView) {
             super(itemView);
@@ -29,7 +29,7 @@ public class PictureAdapter extends RecyclerView.Adapter<PictureAdapter.MyViewHo
     }
     // Applies PictureAdapter
     public PictureAdapter(Context context, ArrayList<PictureData> images) {
-        this.mPictureDataSet = images;
+        this.mPictureDataSet = images; //[Comment] without this
         myContext = context;
     }
 
@@ -39,7 +39,7 @@ public class PictureAdapter extends RecyclerView.Adapter<PictureAdapter.MyViewHo
         View view = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.recycler_item, parent, false);
         MyViewHolder myViewHolder = new MyViewHolder(view);
-        return myViewHolder;
+        return myViewHolder; //[Comment] return new ViewHolder(view)
     }
 
     @Override
@@ -48,9 +48,9 @@ public class PictureAdapter extends RecyclerView.Adapter<PictureAdapter.MyViewHo
         ImageView imageViewPicture = holder.imagePicture;
         String src = mPictureDataSet.get(listPosition).getImage();
         Picasso.with(myContext)
-                .load("file:///android_asset/images/" + src + ".jpg")
-                .resize(200, 200)
-                .into(imageViewPicture);
+                .load("file:///android_asset/images/" + src + ".jpg") //[Comment] hardcode
+                .resize(200, 200) //[Comment] Magic numbers
+                .into(imageViewPicture); //[Comment] holder.imagePicture
     }
 
     @Override

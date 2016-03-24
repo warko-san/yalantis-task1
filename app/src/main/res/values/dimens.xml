@@ -9,4 +9,8 @@
     <dimen name="mark_padding_left_right">15dp</dimen>
     <dimen name="mark_padding_top_bottom">5dp</dimen>
     <dimen name="main_text_margin">20dp</dimen>
+    <dimen name="divider_height">1dp</dimen>
+    <dimen name="recycler_height">200dp</dimen>
+    <dimen name="image_dimen">200dp</dimen>
+    <dimen name="image_padding">10dp</dimen>
 </resources>

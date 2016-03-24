@@ -17,10 +17,9 @@
         android:paddingTop="@dimen/activity_vertical_margin">
 
         <TextView
-            android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="showToastTextView"
+            android:onClick="showToast"
             android:text="@string/header"
             android:textColor="#000000"
             android:textSize="@dimen/header_text_size"
@@ -31,7 +30,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/mark"
-            android:onClick="showToastTextView"
+            android:onClick="showToast"
             android:text="@string/marker" />
 
 
@@ -42,7 +41,7 @@
 
             <View
                 android:layout_width="match_parent"
-                android:layout_height="1dp"
+                android:layout_height="@dimen/divider_height"
                 android:background="@android:color/darker_gray" />
         </LinearLayout>
 
@@ -52,19 +51,17 @@
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/textView2"
                 style="@style/LeftTextStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:onClick="showToastTextView"
+                android:onClick="showToast"
                 android:text="@string/created" />
 
             <TextView
-                android:id="@+id/textView3"
                 style="@style/RightTextStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="showToastTextView"
+                android:onClick="showToast"
                 android:text="@string/creation_date" />
         </LinearLayout>
 
@@ -75,7 +72,7 @@
 
             <View
                 android:layout_width="match_parent"
-                android:layout_height="1dp"
+                android:layout_height="@dimen/divider_height"
                 android:background="@android:color/darker_gray" />
 
         </LinearLayout>
@@ -86,19 +83,17 @@
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/textView4"
                 style="@style/LeftTextStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:onClick="showToastTextView"
+                android:onClick="showToast"
                 android:text="@string/registered" />
 
             <TextView
-                android:id="@+id/textView5"
                 style="@style/RightTextStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="showToastTextView"
+                android:onClick="showToast"
                 android:text="@string/registration_date" />
         </LinearLayout>
 
@@ -109,7 +104,7 @@
 
             <View
                 android:layout_width="match_parent"
-                android:layout_height="1dp"
+                android:layout_height="@dimen/divider_height"
                 android:background="@android:color/darker_gray" />
         </LinearLayout>
 
@@ -119,19 +114,17 @@
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/textView6"
                 style="@style/LeftTextStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:onClick="showToastTextView"
+                android:onClick="showToast"
                 android:text="@string/solve" />
 
             <TextView
-                android:id="@+id/textView7"
                 style="@style/RightTextStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="showToastTextView"
+                android:onClick="showToast"
                 android:text="@string/solving_date" />
         </LinearLayout>
 
@@ -142,7 +135,7 @@
 
             <View
                 android:layout_width="match_parent"
-                android:layout_height="1dp"
+                android:layout_height="@dimen/divider_height"
                 android:background="@android:color/darker_gray" />
         </LinearLayout>
 
@@ -152,19 +145,17 @@
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/textView8"
                 style="@style/LeftTextStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:onClick="showToastTextView"
+                android:onClick="showToast"
                 android:text="@string/responsible" />
 
             <TextView
-                android:id="@+id/textView9"
                 style="@style/RightTextStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="showToastTextView"
+                android:onClick="showToast"
                 android:text="@string/responsible_agency" />
         </LinearLayout>
 
@@ -175,7 +166,7 @@
 
             <View
                 android:layout_width="match_parent"
-                android:layout_height="1dp"
+                android:layout_height="@dimen/divider_height"
                 android:background="@android:color/darker_gray" />
         </LinearLayout>
 
@@ -185,11 +176,10 @@
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/textView10"
                 style="@style/MainTextStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:onClick="showToastTextView"
+                android:onClick="showToast"
                 android:text="@string/main_text" />
         </LinearLayout>
 
@@ -200,10 +190,10 @@
 
 
             <android.support.v7.widget.RecyclerView
-                android:id="@+id/recyclerview"
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:scrollbars="horizontal" />
+                android:layout_height="@dimen/recycler_height"
+                android:scrollbars="horizontal"
+                android:id="@+id/recyclerView" />
 
         </LinearLayout>
     </LinearLayout>

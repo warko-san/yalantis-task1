@@ -10,6 +10,8 @@
     <string name="solving_date">29 лютого 2016</string>
     <string name="responsible">Відповідальний</string>
     <string name="responsible_agency">Дніпропетровський МВК()</string>
-    <string name="main_text">Открытый люк (возле рекламного щита),
-        район поворота 18 и 19 трамваев на проспект Мира с Донецкого шоссе</string>
+    <string name="main_text">Відкритий люк (біля рекламного щита),
+        район повороту 18 и 19 трамваїв на проспект Миру с Донецького шосе</string>
+    <string name="asset_path">file:///android_asset/images/</string>
+
 </resources>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="imageArray">
+        <item>cat</item>
+        <item>dog</item>
+        <item>turtle</item>
+        <item>monkey</item>
+        <item>mouse</item>
+    </string-array>
+</resources>

@@ -14,43 +14,44 @@ import java.util.ArrayList;
 /**
  * Created by Warko on 20.03.2016.
  */
-public class PictureAdapter extends RecyclerView.Adapter<PictureAdapter.MyViewHolder> {
+public class PictureAdapter extends RecyclerView.Adapter<PictureAdapter.ViewHolder> {
 
-    private ArrayList<PictureData> mPictureDataSet;
-    public Context myContext;
+    private ArrayList mPictureDataSet;
+    public Context mContext;
+
     // Adds a ViewHolder
-    public static class MyViewHolder extends RecyclerView.ViewHolder {
-        ImageView imagePicture;
+    public static class ViewHolder extends RecyclerView.ViewHolder {
+        private ImageView imageView;
 
-        public MyViewHolder(View itemView) {
+        public ViewHolder(View itemView) {
             super(itemView);
-            this.imagePicture = (ImageView) itemView.findViewById(R.id.imageView);
+            this.imageView = (ImageView) itemView.findViewById(R.id.imageView);
         }
     }
+
     // Applies PictureAdapter
-    public PictureAdapter(Context context, ArrayList<PictureData> images) {
-        this.mPictureDataSet = images;
-        myContext = context;
+    public PictureAdapter(Context context, ArrayList images) {
+        mPictureDataSet = images;
+        mContext = context;
     }
 
     @Override
-    public MyViewHolder onCreateViewHolder(ViewGroup parent,
-                                           int viewType) {
+    public ViewHolder onCreateViewHolder(ViewGroup parent,
+                                         int viewType) {
         View view = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.recycler_item, parent, false);
-        MyViewHolder myViewHolder = new MyViewHolder(view);
-        return myViewHolder;
+        return new ViewHolder(view);
     }
 
-    @Override
-    public void onBindViewHolder(final MyViewHolder holder, final int listPosition) {
 
-        ImageView imageViewPicture = holder.imagePicture;
-        String src = mPictureDataSet.get(listPosition).getImage();
-        Picasso.with(myContext)
-                .load("file:///android_asset/images/" + src + ".jpg")
-                .resize(200, 200)
-                .into(imageViewPicture);
+    @Override
+    public void onBindViewHolder(final ViewHolder holder, final int listPosition) {
+
+        String src = mPictureDataSet.get(listPosition).toString();
+        Picasso.with(mContext)
+                .load(mContext.getString(R.string.asset_path) + src + ".jpg")
+                .fit()
+                .into(holder.imageView);
     }
 
     @Override

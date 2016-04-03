@@ -17,7 +17,7 @@ import java.util.ArrayList;
 public class PictureAdapter extends RecyclerView.Adapter<PictureAdapter.ViewHolder> {
 
     private ArrayList mPictureDataSet;
-    public Context mContext;
+    private Context mContext;
 
     // Adds a ViewHolder
     public static class ViewHolder extends RecyclerView.ViewHolder {

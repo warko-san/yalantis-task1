@@ -14,29 +14,31 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class MainActivity extends AppCompatActivity {
-    private ArrayList sPictures;
+    private ArrayList mPictures;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ActionBar actionBar = getSupportActionBar();
-        actionBar.setHomeButtonEnabled(true);
-        actionBar.setDisplayHomeAsUpEnabled(true);
-        RecyclerView sRecyclerView = (RecyclerView) findViewById(R.id.recyclerView);
-        sRecyclerView.setHasFixedSize(true);
-        RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(this,
+        if (actionBar != null) {
+            actionBar.setHomeButtonEnabled(true);
+            actionBar.setDisplayHomeAsUpEnabled(true);
+        }
+        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
+        recyclerView.setHasFixedSize(true);
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this,
                 LinearLayoutManager.HORIZONTAL, false);
-        sRecyclerView.setLayoutManager(mLayoutManager);
-
+        recyclerView.setLayoutManager(layoutManager);
         fetchPictures();
-        RecyclerView.Adapter sAdapter = new PictureAdapter(MainActivity.this, sPictures);
-        sRecyclerView.setAdapter(sAdapter);
+        RecyclerView.Adapter adapter = new PictureAdapter(MainActivity.this, mPictures);
+        recyclerView.setAdapter(adapter);
+
     }
 
     // Fills our array with data
     private void fetchPictures() {
-        sPictures = new ArrayList();
-        Collections.addAll(sPictures, getResources().getStringArray(R.array.imageArray));
+        mPictures = new ArrayList();
+        Collections.addAll(mPictures, getResources().getStringArray(R.array.imageArray));
 
 
     }

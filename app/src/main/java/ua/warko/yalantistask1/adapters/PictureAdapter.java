@@ -1,4 +1,4 @@
-package ua.warko.yalantistask1;
+package ua.warko.yalantistask1.adapters;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -10,6 +10,8 @@ import android.widget.ImageView;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
+
+import ua.warko.yalantistask1.R;
 
 /**
  * Created by Warko on 20.03.2016.

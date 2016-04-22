@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group
+        android:checkableBehavior="single">
+    <item
+        android:id="@+id/nav_item_proposal"
+        android:icon="@mipmap/ic_issues"
+        android:title="@string/drawer_issue"/>
+    <item
+        android:id="@+id/map_proposal"
+        android:icon="@mipmap/ic_map"
+        android:title="@string/drawer_map_issue" />
+    </group>
+    <group android:id="@+id/group_id">
+        <item
+            android:id="@+id/login_account"
+            android:title="@string/drawer_login" />
+    </group>
+
+
+</menu>

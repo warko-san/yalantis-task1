@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="126dp"
+        android:id="@+id/cardView"
+        android:layout_marginTop="@dimen/card_margin"
+        android:layout_marginLeft="@dimen/card_margin"
+        android:layout_marginStart="@dimen/card_margin"
+        android:layout_marginRight="@dimen/card_margin"
+        android:layout_marginEnd="@dimen/card_margin"
+        card_view:cardCornerRadius="@dimen/card_corner_radius">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/card_icon"
+                android:layout_marginLeft="@dimen/card_icon_margin_start"
+                android:layout_marginStart="@dimen/card_icon_margin_start"
+                android:layout_marginTop="@dimen/card_icon_margin_top"/>
+
+            <ImageView
+                android:layout_width="@dimen/card_like_size"
+                android:layout_height="@dimen/card_like_size"
+                android:id="@+id/like_icon"
+                android:src="@mipmap/ic_thumb"
+                android:layout_marginLeft="@dimen/card_like_margin_start"
+                android:layout_marginStart="@dimen/card_like_margin_start"
+                android:layout_marginTop="@dimen/card_like_margin_top"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/like_counter"
+                style="@style/LikeCounterStyle"
+                android:layout_marginStart="@dimen/like_counter_margin_start"
+                />
+            <View
+                android:layout_height="match_parent"
+                android:layout_width="@dimen/divider_height"
+                android:background="@android:color/darker_gray"
+                android:layout_marginStart="@dimen/card_divider_margin"
+                android:layout_marginLeft="@dimen/card_divider_margin"
+                android:id="@+id/view"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/card_header_text"
+                style="@style/CardHeaderStyle"
+                android:layout_marginStart="@dimen/card_header_margin_start"
+                android:singleLine="true"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/card_address_text"
+                style="@style/CardAddressStyle"
+                android:layout_marginStart="@dimen/card_header_margin_start"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/card_date_text"
+                style="@style/DaysStyle"
+                android:layout_marginStart="@dimen/card_date_margin_start"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/card_days_text"
+                style="@style/DaysStyle"
+                android:layout_marginEnd="@dimen/card_days_margin_end"
+                android:layout_alignParentEnd="true"/>
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

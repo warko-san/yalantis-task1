@@ -13,5 +13,52 @@
     <string name="main_text">Відкритий люк (біля рекламного щита),
         район повороту 18 и 19 трамваїв на проспект Миру с Донецького шосе</string>
     <string name="asset_path">file:///android_asset/images/</string>
+    <string name="toolbar_title">Всі звернення</string>
+    <string name="behavior">ua.warko.yalantistask1.FloatingActionButtonBehavior</string>
+    <string name="firstTab">В роботі</string>
+    <string name="secondTab">Виконано</string>
+    <string name="thirdTab">Очікує</string>
+    <string name="nature_header">Екологія та природні ресурси</string>
+    <string name="destroy_header">Демонтаж споруд, шо входять до переліку
+        малих архітектурних форм</string>
+    <string name="investigation_header">Розслідування злочинів органів місцевого
+        самоврядування</string>
+    <string name="likes_counter">0</string>
+    <string name="address_1">Вул. Міронова, 6</string>
+    <string name="address_2">Вул. Богдана Хмельницького, 10</string>
+    <string name="address_3">Вул. Глінки, 1а</string>
+    <string name="address_4">Вул. Ляшка-Попеля, 23</string>
+    <string name="address_5">Вул. Рогальова, 7</string>
+    <string name="address_6">Вул. Мандриківська, 18</string>
+    <string name="creation_date_1">Кві. 04, 2016</string>
+    <string name="creation_date_2">Кві. 10, 2016</string>
+    <string name="creation_date_3">Бер. 09, 2016</string>
+    <string name="creation_date_4">Бер. 29, 2016</string>
+    <string name="creation_date_5">Бер. 31, 2016</string>
+    <string name="creation_date_6">Кві. 15, 2016</string>
+    <string name="registration_date_1">Кві. 05, 2016</string>
+    <string name="registration_date_2">Кві. 11, 2016</string>
+    <string name="registration_date_3">Бер. 10, 2016</string>
+    <string name="registration_date_4">Бер. 30, 2016</string>
+    <string name="registration_date_5">Кві. 01, 2016</string>
+    <string name="registration_date_6">Кві. 16, 2016</string>
+    <string name="deadline_date_1">Кві. 15, 2016</string>
+    <string name="deadline_date_2">Кві. 21, 2016</string>
+    <string name="deadline_date_3">Бер. 20, 2016</string>
+    <string name="deadline_date_4">Кві. 09, 2016</string>
+    <string name="deadline_date_5">Кві. 11, 2016</string>
+    <string name="deadline_date_6">Кві. 26, 2016</string>
+    <string name="main_text_1">Проблема на вул. Міронова, 6</string>
+    <string name="main_text_2">Проблема на вул. Богдана Хмельницького, 10</string>
+    <string name="main_text_3">Проблема на вул. Глінки, 1а</string>
+    <string name="main_text_4">Проблема на вул. Ляшка-Попеля, 23</string>
+    <string name="main_text_5">Проблема на вул. Рогальова, 7</string>
+    <string name="main_text_6">Проблема на вул. Мандриківська, 18</string>
+    <string name="e_contact">e-contact</string>
+    <string name="drawer_issue">Всі звернення</string>
+    <string name="drawer_map_issue">Звернення на мапі</string>
+    <string name="drawer_login">Увійти в аккаунт</string>
+    <string name="toolbar_filter">Filter</string>
+
 
 </resources>

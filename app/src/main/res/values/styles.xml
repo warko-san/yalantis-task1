@@ -1,7 +1,7 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
@@ -40,6 +40,41 @@
         <item name="android:layout_marginTop">@dimen/main_text_margin</item>
         <item name="android:textSize">@dimen/all_text_size</item>
         <item name="android:textColor">#000000</item>
+    </style>
 
+    <style name="LikeCounterStyle" parent="@style/TextAppearance.AppCompat">
+        <item name="android:layout_marginLeft">@dimen/like_counter_margin_start</item>
+        <item name="android:layout_marginTop">@dimen/like_counter_margin_top</item>
+        <item name="android:textSize">@dimen/like_counter_text</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="CardHeaderStyle" parent="@style/TextAppearance.AppCompat">
+        <item name="android:layout_marginLeft">@dimen/card_header_margin_start</item>
+        <item name="android:layout_marginTop">@dimen/card_header_margin_top</item>
+        <item name="android:textSize">@dimen/card_header_size</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="CardAddressStyle" parent="@style/TextAppearance.AppCompat">
+        <item name="android:layout_marginLeft">@dimen/card_header_margin_start</item>
+        <item name="android:layout_marginTop">@dimen/card_address_margin_top</item>
+        <item name="android:textSize">@dimen/card_address_size</item>
+    </style>
+
+    <style name="DaysStyle" parent="@style/TextAppearance.AppCompat">
+        <item name="android:layout_marginLeft">@dimen/card_date_margin_start</item>
+        <item name="android:layout_marginTop">@dimen/card_date_margin_top</item>
+        <item name="android:textSize">@dimen/card_address_size</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="DrawerHeaderStyle" parent="@style/TextAppearance.AppCompat">
+        <item name="android:layout_marginLeft">@dimen/drawer_header_margin_start</item>
+        <item name="android:layout_marginTop">@dimen/drawer_header_margin_top</item>
+        <item name="android:textSize">@dimen/drawer_header_size</item>
+        <item name="android:textColor">#ffff</item>
+        <item name="android:textStyle">bold</item>
     </style>
 </resources>

@@ -9,10 +9,10 @@ import ua.warko.yalantistask1.models.ContentDataModel;
  * Created by Warko on 19.04.2016.
  */
 public class ListData {
-    private static ArrayList<ContentDataModel> mData;
+    private static ArrayList<ContentDataModel> mData; //[Comment] Use List instead of array list
 
 
-    public static ArrayList<ContentDataModel> processingList() {
+    public static ArrayList<ContentDataModel> processingList() { //[Comment] Fill list only once in init() method
         mData = new ArrayList<>();
 
         mData.add(new ContentDataModel(R.string.likes_counter, "Комунальне господарство", "Вул. Міронова, 6", "Кві. 04, 2016", "12 днів", "Кві. 05, 2016", "Кві. 15, 2016", "Проблема на вул. Міронова, 6", "В роботі"));

@@ -38,7 +38,7 @@ public class ListFragment extends Fragment {
         listView.setOnScrollListener(new AbsListView.OnScrollListener() {
             @Override
             public void onScrollStateChanged(AbsListView view, int scrollState) {
-                if (scrollState == 1 || scrollState == 2) {
+                if (scrollState == 1 || scrollState == 2) { //[Comment] What is 1 and 2?
                     fab.hide();
                 } else {
                     fab.show();

@@ -51,8 +51,8 @@ public class RecyclerFragment extends Fragment {
                             Intent intent = new Intent(getContext(), CardActivity.class);
                             intent.putExtra("model", model);
                             view.getContext().startActivity(intent);
-                        } else if (getPage().equals("done")) {
-                            ContentDataModel model = ListData.doneList().get(position);
+                        } else if (getPage().equals("done")) { //[Comment] Hardcode
+                            ContentDataModel model = ListData.doneList().get(position); //[Comment] Copy/paste code
                             Intent intent = new Intent(getContext(), CardActivity.class);
                             intent.putExtra("model", model);
                             view.getContext().startActivity(intent);

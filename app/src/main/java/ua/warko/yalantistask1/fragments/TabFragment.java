@@ -15,7 +15,7 @@ import ua.warko.yalantistask1.R;
 /**
  * Created by Warko on 11.04.2016.
  */
-public class TabFragment extends Fragment {
+public class TabFragment extends Fragment { //[Comment] This fragment is unnecessary, you can make this logic in activity
     private TabLayout mTabLayout;
     private ViewPager mViewPager;
 

@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) { //[Comment] onCreate is too large. Please make few separated methods
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawerLayout);
@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
 
                     // if (menuItem.getItemId() == R.id.map_proposal) {
                     //     FragmentTransaction fragmentTransaction = mFragmentManager.beginTransaction();
-                    //     fragmentTransaction.replace(R.id.containerView, new MapProposalsFragment()).commit();
+                    //     fragmentTransaction.replace(R.id.containerView, new MapProposalsFragment()).commit(); //[Comment] Commented code
                     // }
                     if (menuItem.getItemId() == R.id.nav_item_proposal) {
                         FragmentTransaction fragmentTransaction1 = mFragmentManager.beginTransaction();

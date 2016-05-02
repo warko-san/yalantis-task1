@@ -8,7 +8,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import java.util.ArrayList;
+import java.util.List;
 
 import ua.warko.yalantistask1.R;
 import ua.warko.yalantistask1.models.ContentDataModel;
@@ -17,7 +17,7 @@ import ua.warko.yalantistask1.models.ContentDataModel;
  * Created by Warko on 14.04.2016.
  */
 public class ListAdapter extends ArrayAdapter<ContentDataModel> {
-    private ArrayList<ContentDataModel> mDataSet;
+    private List<ContentDataModel> mDataSet;
     private Context mContext;
 
     public static class ViewHolder {
@@ -26,7 +26,7 @@ public class ListAdapter extends ArrayAdapter<ContentDataModel> {
 
     }
 
-    public ListAdapter(Context context, ArrayList<ContentDataModel> content) {
+    public ListAdapter(Context context, List<ContentDataModel> content) {
         super(context, 0, content);
         mContext = context;
         mDataSet = content;

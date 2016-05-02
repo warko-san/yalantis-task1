@@ -9,11 +9,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import ua.warko.yalantistask1.GlobalState;
 import ua.warko.yalantistask1.R;
 import ua.warko.yalantistask1.RecyclerItemClickListener;
 import ua.warko.yalantistask1.activities.CardActivity;
 import ua.warko.yalantistask1.adapters.ContentAdapter;
-import ua.warko.yalantistask1.data.ListData;
 import ua.warko.yalantistask1.models.ContentDataModel;
 
 /**
@@ -21,6 +21,8 @@ import ua.warko.yalantistask1.models.ContentDataModel;
  */
 public class RecyclerFragment extends Fragment {
     private static final String KEY_FILE = "file";
+    private ContentDataModel mModel;
+    private Intent mIntent;
 
     public static Fragment newInstance(String file) {
         RecyclerFragment fragment = new RecyclerFragment();
@@ -37,6 +39,8 @@ public class RecyclerFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.recycler_fragment_layout, container, false);
+        mIntent = new Intent(getContext(), CardActivity.class);
+
         RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.tab_recycler);
         recyclerView.setHasFixedSize(true);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getActivity(),
@@ -46,32 +50,26 @@ public class RecyclerFragment extends Fragment {
                 new RecyclerItemClickListener.OnItemClickListener() {
                     @Override
                     public void onItemClick(View view, int position) {
-                        if (getPage().equals("processing")) {
-                            ContentDataModel model = ListData.processingList().get(position);
-                            Intent intent = new Intent(getContext(), CardActivity.class);
-                            intent.putExtra("model", model);
-                            view.getContext().startActivity(intent);
-                        } else if (getPage().equals("done")) {
-                            ContentDataModel model = ListData.doneList().get(position);
-                            Intent intent = new Intent(getContext(), CardActivity.class);
-                            intent.putExtra("model", model);
-                            view.getContext().startActivity(intent);
+                        if (getPage().equals(getString(R.string.processing_flag))) {
+                            mModel = GlobalState.processingList().get(position);
+                            mIntent.putExtra(getString(R.string.model_flag), mModel);
+                            view.getContext().startActivity(mIntent);
+                        } else if (getPage().equals(getString(R.string.done_flag))) {
+                            mModel = GlobalState.doneList().get(position);
+                            mIntent.putExtra(getString(R.string.model_flag), mModel);
+                            view.getContext().startActivity(mIntent);
                         }
                     }
                 })
         );
 
         RecyclerView.Adapter adapter;
-        if (getPage().equals("processing")) {
-
-            adapter = new ContentAdapter(getContext(), ListData.processingList());
+        if (getPage().equals(getString(R.string.processing_flag))) {
+            adapter = new ContentAdapter(getContext(), GlobalState.processingList());
             recyclerView.setAdapter(adapter);
-
-        } else if (getPage().equals("done")) {
-
-            adapter = new ContentAdapter(getContext(), ListData.doneList());
+        } else if (getPage().equals(getString(R.string.done_flag))) {
+            adapter = new ContentAdapter(getContext(), GlobalState.doneList());
             recyclerView.setAdapter(adapter);
-
         }
 
 

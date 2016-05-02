@@ -11,10 +11,10 @@ import android.widget.AbsListView;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
+import ua.warko.yalantistask1.GlobalState;
 import ua.warko.yalantistask1.R;
 import ua.warko.yalantistask1.activities.CardActivity;
 import ua.warko.yalantistask1.adapters.ListAdapter;
-import ua.warko.yalantistask1.data.ListData;
 import ua.warko.yalantistask1.models.ContentDataModel;
 
 /**
@@ -38,7 +38,7 @@ public class ListFragment extends Fragment {
         listView.setOnScrollListener(new AbsListView.OnScrollListener() {
             @Override
             public void onScrollStateChanged(AbsListView view, int scrollState) {
-                if (scrollState == 1 || scrollState == 2) {
+                if (scrollState == SCROLL_STATE_TOUCH_SCROLL || scrollState == SCROLL_STATE_FLING) {
                     fab.hide();
                 } else {
                     fab.show();
@@ -50,7 +50,7 @@ public class ListFragment extends Fragment {
                                  int totalItemCount) {
             }
         });
-        listView.setAdapter(new ListAdapter(getContext(), ListData.waitingList()));
+        listView.setAdapter(new ListAdapter(getContext(), GlobalState.waitingList()));
         return view;
     }
 

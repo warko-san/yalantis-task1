@@ -34,7 +34,7 @@ public class CardActivity extends AppCompatActivity {
         mMainText = (TextView) findViewById(R.id.cardMainText);
         // check for available data
         Intent intent = getIntent();
-        ContentDataModel model = (ContentDataModel) intent.getSerializableExtra("model");
+        ContentDataModel model = intent.getParcelableExtra("model");
         if (model != null) {
             fetchData(model);
         }

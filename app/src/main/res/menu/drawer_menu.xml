@@ -5,11 +5,12 @@
     <item
         android:id="@+id/nav_item_proposal"
         android:icon="@mipmap/ic_issues"
-        android:title="@string/drawer_issue"/>
+        android:title="@string/drawer_issue"
+        android:checked="true"/>
     <item
         android:id="@+id/map_proposal"
         android:icon="@mipmap/ic_map"
-        android:title="@string/drawer_map_issue" />
+        android:title="@string/drawer_map_issue"/>
     </group>
     <group android:id="@+id/group_id">
         <item

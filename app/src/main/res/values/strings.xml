@@ -59,6 +59,9 @@
     <string name="drawer_map_issue">Звернення на мапі</string>
     <string name="drawer_login">Увійти в аккаунт</string>
     <string name="toolbar_filter">Filter</string>
+    <string name="processing_flag">processing</string>
+    <string name="done_flag">done</string>
+    <string name="model_flag">model</string>
 
 
 </resources>

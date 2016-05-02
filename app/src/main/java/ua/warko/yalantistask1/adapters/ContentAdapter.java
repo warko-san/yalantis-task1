@@ -8,7 +8,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import java.util.ArrayList;
+import java.util.List;
 
 import ua.warko.yalantistask1.R;
 import ua.warko.yalantistask1.models.ContentDataModel;
@@ -17,7 +17,7 @@ import ua.warko.yalantistask1.models.ContentDataModel;
  * Created by Warko on 13.04.2016.
  */
 public class ContentAdapter extends RecyclerView.Adapter<ContentAdapter.ViewHolder> {
-    private ArrayList<ContentDataModel> mDataSet;
+    private List<ContentDataModel> mDataSet;
     private Context mContext;
 
 
@@ -37,7 +37,7 @@ public class ContentAdapter extends RecyclerView.Adapter<ContentAdapter.ViewHold
 
     }
 
-    public ContentAdapter(Context context, ArrayList<ContentDataModel> data) {
+    public ContentAdapter(Context context, List<ContentDataModel> data) {
         mDataSet = data;
         mContext = context;
     }

@@ -1,4 +1,4 @@
-package ua.warko.yalantistask1;
+package ua.warko.yalantistask1.util;
 
 import android.content.Context;
 import android.support.design.widget.CoordinatorLayout;

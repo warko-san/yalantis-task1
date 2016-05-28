@@ -2,60 +2,26 @@ package ua.warko.yalantistask1;
 
 import android.app.Application;
 
-import java.util.ArrayList;
-import java.util.List;
+import com.facebook.drawee.backends.pipeline.Fresco;
 
-import ua.warko.yalantistask1.models.ContentDataModel;
+import io.realm.Realm;
+import io.realm.RealmConfiguration;
 
 /**
  * Created by Warko on 19.04.2016.
  */
 public class GlobalState extends Application {
-    private static List<ContentDataModel> mData;
+    @Override
+    public void onCreate(){
+        super.onCreate();
+        RealmConfiguration realmConfiguration = new RealmConfiguration.Builder(this)
+                .name(Realm.DEFAULT_REALM_NAME)
+                .schemaVersion(0)
+                .deleteRealmIfMigrationNeeded()
+                .build();
+        Realm.setDefaultConfiguration(realmConfiguration);
+        Fresco.initialize(this);
 
-
-    public static List<ContentDataModel> processingList() {
-        mData = new ArrayList<>();
-        mData.add(new ContentDataModel(R.string.likes_counter, "Комунальне господарство", "Вул. Міронова, 6", "Кві. 04, 2016", "12 днів", "Кві. 05, 2016", "Кві. 15, 2016", "Проблема на вул. Міронова, 6", "В роботі"));
-        mData.add(new ContentDataModel(R.string.likes_counter, "Екологія та природні ресурси", "Вул. Богдана Хмельницького, 10", "Кві. 10, 2016", "10 днів", "Кві. 11, 2016", "Кві. 21, 2016", "Проблема на вул. Богдана Хмельницького, 10", "В роботі"));
-        mData.add(new ContentDataModel(R.string.likes_counter, "Демонтаж споруд, шо входять до переліку малих архітектурних форм", "Вул. Глінки, 1а", "Бер. 09, 2016", "13 днів", "Бер. 10, 2016", "Бер. 20, 2016", "Проблема на вул. Глінки, 1а", "В роботі"));
-        mData.add(new ContentDataModel(R.string.likes_counter, "Розслідування злочинів органів місцевого самоврядування", "Вул. Ляшка-Попеля, 23", "Бер. 29, 2016", "9 днів", "Бер. 30, 2016", "Кві. 09, 2016", "Проблема на вул. Ляшка-Попеля, 23", "В роботі"));
-        mData.add(new ContentDataModel(R.string.likes_counter, "Комунальне господарство", "Вул. Рогальова, 7", "Бер. 31, 2016", "5 днів", "Кві. 01, 2016", "Кві. 11, 2016", "Проблема на вул. Рогальова, 7", "В роботі"));
-        mData.add(new ContentDataModel(R.string.likes_counter, "Екологія та природні ресурси", "Вул. Мандриківська, 18", "Кві. 15, 2016", "6 днів", "Кві. 16, 2016", "Кві. 26, 2016", "Проблема на вул. Мандриківська, 18", "В роботі"));
-        mData.add(new ContentDataModel(R.string.likes_counter, "Демонтаж споруд, шо входять до переліку малих архітектурних форм", "Вул. Глінки, 1а", "Бер. 09, 2016", "13 днів", "Бер. 10, 2016", "Бер. 20, 2016", "Проблема на вул. Глінки, 1а", "В роботі"));
-        mData.add(new ContentDataModel(R.string.likes_counter, "Комунальне господарство", "Вул. Рогальова, 7", "Бер. 31, 2016", "5 днів", "Кві. 01, 2016", "Кві. 11, 2016", "Проблема на вул. Рогальова, 7", "В роботі"));
-        mData.add(new ContentDataModel(R.string.likes_counter, "Екологія та природні ресурси", "Вул. Богдана Хмельницького, 10", "Кві. 10, 2016", "10 днів", "Кві. 11, 2016", "Кві. 21, 2016", "Проблема на вул. Богдана Хмельницького, 10", "В роботі"));
-        mData.add(new ContentDataModel(R.string.likes_counter, "Комунальне господарство", "Вул. Міронова, 6", "Кві. 04, 2016", "12 днів", "Кві. 05, 2016", "Кві. 15, 2016", "Проблема на вул. Міронова, 6", "В роботі"));
-        return mData;
     }
 
-    public static List<ContentDataModel> doneList() {
-        mData = new ArrayList<>();
-        mData.add(new ContentDataModel(R.string.likes_counter, "Екологія та природні ресурси", "Вул. Мандриківська, 18", "Кві. 15, 2016", "6 днів", "Кві. 16, 2016", "Кві. 26, 2016", "Проблема на вул. Мандриківська, 18", "В роботі"));
-        mData.add(new ContentDataModel(R.string.likes_counter, "Демонтаж споруд, шо входять до переліку малих архітектурних форм", "Вул. Глінки, 1а", "Бер. 09, 2016", "13 днів", "Бер. 10, 2016", "Бер. 20, 2016", "Проблема на вул. Глінки, 1а", "В роботі"));
-        mData.add(new ContentDataModel(R.string.likes_counter, "Комунальне господарство", "Вул. Рогальова, 7", "Бер. 31, 2016", "5 днів", "Кві. 01, 2016", "Кві. 11, 2016", "Проблема на вул. Рогальова, 7", "В роботі"));
-        mData.add(new ContentDataModel(R.string.likes_counter, "Екологія та природні ресурси", "Вул. Богдана Хмельницького, 10", "Кві. 10, 2016", "10 днів", "Кві. 11, 2016", "Кві. 21, 2016", "Проблема на вул. Богдана Хмельницького, 10", "В роботі"));
-        mData.add(new ContentDataModel(R.string.likes_counter, "Комунальне господарство", "Вул. Міронова, 6", "Кві. 04, 2016", "12 днів", "Кві. 05, 2016", "Кві. 15, 2016", "Проблема на вул. Міронова, 6", "В роботі"));
-        mData.add(new ContentDataModel(R.string.likes_counter, "Комунальне господарство", "Вул. Міронова, 6", "Кві. 04, 2016", "12 днів", "Кві. 05, 2016", "Кві. 15, 2016", "Проблема на вул. Міронова, 6", "В роботі"));
-        mData.add(new ContentDataModel(R.string.likes_counter, "Екологія та природні ресурси", "Вул. Богдана Хмельницького, 10", "Кві. 10, 2016", "10 днів", "Кві. 11, 2016", "Кві. 21, 2016", "Проблема на вул. Богдана Хмельницького, 10", "В роботі"));
-        mData.add(new ContentDataModel(R.string.likes_counter, "Демонтаж споруд, шо входять до переліку малих архітектурних форм", "Вул. Глінки, 1а", "Бер. 09, 2016", "13 днів", "Бер. 10, 2016", "Бер. 20, 2016", "Проблема на вул. Глінки, 1а", "В роботі"));
-        mData.add(new ContentDataModel(R.string.likes_counter, "Розслідування злочинів органів місцевого самоврядування", "Вул. Ляшка-Попеля, 23", "Бер. 29, 2016", "9 днів", "Бер. 30, 2016", "Кві. 09, 2016", "Проблема на вул. Ляшка-Попеля, 23", "В роботі"));
-        mData.add(new ContentDataModel(R.string.likes_counter, "Комунальне господарство", "Вул. Рогальова, 7", "Бер. 31, 2016", "5 днів", "Кві. 01, 2016", "Кві. 11, 2016", "Проблема на вул. Рогальова, 7", "В роботі"));
-        return mData;
-    }
-
-    public static List<ContentDataModel> waitingList() {
-        mData = new ArrayList<>();
-        mData.add(new ContentDataModel(R.string.likes_counter, "Екологія та природні ресурси", "Вул. Богдана Хмельницького, 10", "Кві. 10, 2016", "10 днів", "Кві. 11, 2016", "Кві. 21, 2016", "Проблема на вул. Богдана Хмельницького, 10", "В роботі"));
-        mData.add(new ContentDataModel(R.string.likes_counter, "Комунальне господарство", "Вул. Міронова, 6", "Кві. 04, 2016", "12 днів", "Кві. 05, 2016", "Кві. 15, 2016", "Проблема на вул. Міронова, 6", "В роботі"));
-        mData.add(new ContentDataModel(R.string.likes_counter, "Комунальне господарство", "Вул. Міронова, 6", "Кві. 04, 2016", "12 днів", "Кві. 05, 2016", "Кві. 15, 2016", "Проблема на вул. Міронова, 6", "В роботі"));
-        mData.add(new ContentDataModel(R.string.likes_counter, "Екологія та природні ресурси", "Вул. Богдана Хмельницького, 10", "Кві. 10, 2016", "10 днів", "Кві. 11, 2016", "Кві. 21, 2016", "Проблема на вул. Богдана Хмельницького, 10", "В роботі"));
-        mData.add(new ContentDataModel(R.string.likes_counter, "Демонтаж споруд, шо входять до переліку малих архітектурних форм", "Вул. Глінки, 1а", "Бер. 09, 2016", "13 днів", "Бер. 10, 2016", "Бер. 20, 2016", "Проблема на вул. Глінки, 1а", "В роботі"));
-        mData.add(new ContentDataModel(R.string.likes_counter, "Розслідування злочинів органів місцевого самоврядування", "Вул. Ляшка-Попеля, 23", "Бер. 29, 2016", "9 днів", "Бер. 30, 2016", "Кві. 09, 2016", "Проблема на вул. Ляшка-Попеля, 23", "В роботі"));
-        mData.add(new ContentDataModel(R.string.likes_counter, "Комунальне господарство", "Вул. Рогальова, 7", "Бер. 31, 2016", "5 днів", "Кві. 01, 2016", "Кві. 11, 2016", "Проблема на вул. Рогальова, 7", "В роботі"));
-        mData.add(new ContentDataModel(R.string.likes_counter, "Комунальне господарство", "Вул. Міронова, 6", "Кві. 04, 2016", "12 днів", "Кві. 05, 2016", "Кві. 15, 2016", "Проблема на вул. Міронова, 6", "В роботі"));
-        mData.add(new ContentDataModel(R.string.likes_counter, "Екологія та природні ресурси", "Вул. Богдана Хмельницького, 10", "Кві. 10, 2016", "10 днів", "Кві. 11, 2016", "Кві. 21, 2016", "Проблема на вул. Богдана Хмельницького, 10", "В роботі"));
-        mData.add(new ContentDataModel(R.string.likes_counter, "Демонтаж споруд, шо входять до переліку малих архітектурних форм", "Вул. Глінки, 1а", "Бер. 09, 2016", "13 днів", "Бер. 10, 2016", "Бер. 20, 2016", "Проблема на вул. Глінки, 1а", "В роботі"));
-        return mData;
-    }
 }

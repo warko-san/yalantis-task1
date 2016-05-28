@@ -38,4 +38,9 @@
     <dimen name="drawer_header_size">24sp</dimen>
     <dimen name="drawer_header_height">100dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
+    <dimen name="profile_picture_size">120dp</dimen>
+    <dimen name="profile_picture_margin_left">24dp</dimen>
+    <dimen name="profile_picture_margin_top">50dp</dimen>
+    <dimen name="profile_text_margin_left">50dp</dimen>
+    <dimen name="profile_text_margin_top">16dp</dimen>
 </resources>

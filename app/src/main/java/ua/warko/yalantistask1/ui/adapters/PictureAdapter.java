@@ -1,38 +1,42 @@
-package ua.warko.yalantistask1.adapters;
+package ua.warko.yalantistask1.ui.adapters;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 
+import com.facebook.drawee.view.SimpleDraweeView;
 import com.squareup.picasso.Picasso;
 
-import java.util.ArrayList;
+import java.util.List;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
 import ua.warko.yalantistask1.R;
+import ua.warko.yalantistask1.pojo.Files;
 
 /**
  * Created by Warko on 20.03.2016.
  */
 public class PictureAdapter extends RecyclerView.Adapter<PictureAdapter.ViewHolder> {
 
-    private ArrayList mPictureDataSet;
+    private List<Files> mPictureDataSet;
     private Context mContext;
 
     // Adds a ViewHolder
     public static class ViewHolder extends RecyclerView.ViewHolder {
-        private ImageView imageView;
+        @BindView(R.id.imageView)
+        SimpleDraweeView draweeView;
 
         public ViewHolder(View itemView) {
             super(itemView);
-            this.imageView = (ImageView) itemView.findViewById(R.id.imageView);
+            ButterKnife.bind(this, itemView);
         }
     }
 
     // Applies PictureAdapter
-    public PictureAdapter(Context context, ArrayList images) {
+    public PictureAdapter(Context context, List<Files> images) {
         mPictureDataSet = images;
         mContext = context;
     }
@@ -49,11 +53,11 @@ public class PictureAdapter extends RecyclerView.Adapter<PictureAdapter.ViewHold
     @Override
     public void onBindViewHolder(final ViewHolder holder, final int listPosition) {
 
-        String src = mPictureDataSet.get(listPosition).toString();
+        String fileName = mPictureDataSet.get(listPosition).getFilename();
         Picasso.with(mContext)
-                .load(mContext.getString(R.string.asset_path) + src + ".jpg")
+                .load(mContext.getString(R.string.images_path) + fileName)
                 .fit()
-                .into(holder.imageView);
+                .into(holder.draweeView);
     }
 
     @Override

@@ -3,228 +3,227 @@
               android:layout_width="match_parent"
               android:orientation="vertical"
               xmlns:android="http://schemas.android.com/apk/res/android">
-<android.support.v7.widget.Toolbar
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/toolbar"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:title="@string/toolbar_title"
-    android:elevation="4dp"
-    android:background="@color/colorPrimary"
-    android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-    />
 
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".activities.CardActivity"
-    android:id="@+id/scrollView">
-
-
-    <LinearLayout
+    <android.support.v7.widget.Toolbar
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:focusable="true"
-        android:focusableInTouchMode="true"
-        android:orientation="vertical"
-        android:paddingBottom="@dimen/activity_vertical_margin"
-        android:paddingLeft="@dimen/activity_horizontal_margin"
-        android:paddingRight="@dimen/activity_horizontal_margin"
-        android:paddingTop="@dimen/activity_vertical_margin">
+        android:layout_height="wrap_content"
+        android:title="@string/toolbar_title"
+        android:elevation="4dp"
+        android:background="@color/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        />
 
-
-
-
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="showToast"
-            android:text="@string/header"
-            android:textColor="#000000"
-            android:textSize="@dimen/header_text_size"
-            android:textStyle="bold"
-            android:id="@+id/cardActivityTitle"/>
-
-        <TextView
-            style="@style/MarkStyle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/mark"
-            android:onClick="showToast"
-            android:text="@string/marker"
-            android:id="@+id/cardMarker"/>
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
-
-            <View
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/divider_height"
-                android:background="@android:color/darker_gray" />
-        </LinearLayout>
+                android:layout_height="match_parent"
+                tools:context=".ui.CardActivity"
+                android:id="@+id/scrollView">
+
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal">
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_vertical_margin">
+
 
             <TextView
-                style="@style/LeftTextStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:onClick="showToast"
-                android:text="@string/created"
-                />
+                android:text="@string/header"
+                android:textColor="#000000"
+                android:textSize="@dimen/header_text_size"
+                android:textStyle="bold"
+                android:id="@+id/cardActivityTitle"/>
 
             <TextView
-                style="@style/RightTextStyle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:onClick="showToast"
-                android:text="@string/creation_date"
-                android:id="@+id/cardCreationDate"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/divider_height"
-                android:background="@android:color/darker_gray" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
-
-            <TextView
-                style="@style/LeftTextStyle"
+                style="@style/MarkStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@drawable/mark"
                 android:onClick="showToast"
-                android:text="@string/registered"
-                />
+                android:text="@string/marker"
+                android:id="@+id/cardMarker"/>
 
-            <TextView
-                style="@style/RightTextStyle"
+
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:onClick="showToast"
-                android:text="@string/registration_date"
-                android:id="@+id/cardRegisteredDate"/>
-        </LinearLayout>
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/divider_height"
+                    android:background="@android:color/darker_gray"/>
+            </LinearLayout>
 
-            <View
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/divider_height"
-                android:background="@android:color/darker_gray" />
-        </LinearLayout>
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
+                <TextView
+                    style="@style/LeftTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="showToast"
+                    android:text="@string/created"
+                    />
 
-            <TextView
-                style="@style/LeftTextStyle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:onClick="showToast"
-                android:text="@string/solve" />
+                <TextView
+                    style="@style/RightTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="showToast"
+                    android:text="@string/creation_date"
+                    android:id="@+id/cardCreationDate"/>
+            </LinearLayout>
 
-            <TextView
-                style="@style/RightTextStyle"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:onClick="showToast"
-                android:text="@string/solving_date"
-                android:id="@+id/cardSolvingDate"/>
-        </LinearLayout>
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/divider_height"
+                    android:background="@android:color/darker_gray"/>
 
-            <View
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/divider_height"
-                android:background="@android:color/darker_gray" />
-        </LinearLayout>
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
+                <TextView
+                    style="@style/LeftTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="showToast"
+                    android:text="@string/registered"
+                    />
 
-            <TextView
-                style="@style/LeftTextStyle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:onClick="showToast"
-                android:text="@string/responsible" />
+                <TextView
+                    style="@style/RightTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="showToast"
+                    android:text="@string/registration_date"
+                    android:id="@+id/cardRegisteredDate"/>
+            </LinearLayout>
 
-            <TextView
-                style="@style/RightTextStyle"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:onClick="showToast"
-                android:text="@string/responsible_agency" />
-        </LinearLayout>
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/divider_height"
+                    android:background="@android:color/darker_gray"/>
+            </LinearLayout>
 
-            <View
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/divider_height"
-                android:background="@android:color/darker_gray" />
-        </LinearLayout>
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
+                <TextView
+                    style="@style/LeftTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="showToast"
+                    android:text="@string/solve"/>
 
-            <TextView
-                style="@style/MainTextStyle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:onClick="showToast"
-                android:text="@string/main_text"
-                android:id="@+id/cardMainText"/>
-        </LinearLayout>
+                <TextView
+                    style="@style/RightTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="showToast"
+                    android:text="@string/solving_date"
+                    android:id="@+id/cardSolvingDate"/>
+            </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
-
-
-            <android.support.v7.widget.RecyclerView
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/recycler_height"
-                android:scrollbars="horizontal"
-                android:id="@+id/recyclerView" />
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
 
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/divider_height"
+                    android:background="@android:color/darker_gray"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/LeftTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="showToast"
+                    android:text="@string/responsible"/>
+
+                <TextView
+                    style="@style/RightTextStyle"
+                    android:id="@+id/cardPerformer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="showToast"
+                    android:text="@string/responsible_agency"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/divider_height"
+                    android:background="@android:color/darker_gray"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/MainTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="showToast"
+                    android:text="@string/main_text"
+                    android:id="@+id/cardMainText"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+
+                <android.support.v7.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/recycler_height"
+                    android:scrollbars="horizontal"
+                    android:id="@+id/recyclerView"/>
+
+            </LinearLayout>
         </LinearLayout>
-    </LinearLayout>
-</ScrollView>
+    </ScrollView>
 </LinearLayout>
